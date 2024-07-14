@@ -76,7 +76,7 @@
 					@foreach($temas as $key => $item)
 					<div class="item">
 						<div class="thumb">
-						<img src="storage/{{$item->image_url}}" alt="">
+						<img src="storage/{{$item->imagen_url}}" alt="">
 						<div class="hover-effect">
 							<h6>2.4K Streaming</h6>
 						</div>
