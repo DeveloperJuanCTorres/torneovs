@@ -15,6 +15,6 @@ class Promotion extends Model
         'link_youtube',
         'name',
         'description',
-        'logo_url'
+        'logo_url' 
     ];
 }
