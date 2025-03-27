@@ -13,7 +13,7 @@
             </div>
         @endif
 
-        <form method="POST" action="{{ route('login') }}">
+        <form id="form-login" method="POST" action="{{ route('login') }}">
             @csrf
 
             <div>
@@ -40,12 +40,28 @@
                     </a>
                 @endif
 
-                <x-jet-button class="ml-4" style="background-color: #1D234D;">
+                <!-- <x-jet-button class="ml-4" style="background-color: #1D234D;">
                     Acceso
-                </x-jet-button>
+                </x-jet-button> -->
+                <x-jet-button 
+                    style="background-color: #1D234D;"
+                    class="g-recaptcha ml-4" 
+                    data-sitekey="6LeZ4AErAAAAAOx3RC6qulKWQOKBXzhpvFNvbkeS" 
+                    data-callback='onSubmit' 
+                    data-action='submit'>Ingresar</x-jet-button>
             </div>
         </form>
         <br>
         <a href="{{ route('register') }}">No tienes cuenta?, Registrate aquí</a>
     </x-jet-authentication-card>
+    
+    
 </x-guest-layout>
+
+<script src="https://www.google.com/recaptcha/api.js"></script>
+
+<script>
+   function onSubmit(token) {
+     document.getElementById("form-login").submit();
+   }
+ </script>

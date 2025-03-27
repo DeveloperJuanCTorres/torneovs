@@ -1,4 +1,5 @@
-<x-guest-layout>
+
+<x-guest-layout>  
     <x-jet-authentication-card>
         <x-slot name="logo">
             <img style="width: 200px;" src="assets/images/logonegro.png" alt="">
@@ -6,7 +7,7 @@
 
         <x-jet-validation-errors class="mb-4" />
 
-        <form method="POST" action="{{ route('register') }}">
+        <form id="form-registrar" method="POST" action="{{ route('register') }}">
             @csrf
 
             <div>
@@ -35,6 +36,12 @@
             <div class="mt-4">
                 <x-jet-label for="email" value="{{ __('Email') }}" />
                 <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
+            </div>
+
+            <div class="mt-4">
+                <x-jet-label for="phone" value="Celular" />
+                <x-jet-input class="block mt-1 w-full" id='phone' type="number" name="phone" :value="old('phone')"/>
+                <!-- <x-jet-input id="celular" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" /> -->
             </div>
 
             <div class="mt-4">
@@ -69,10 +76,25 @@
                     ¿Ya estas registrado?
                 </a>
 
-                <x-jet-button class="ml-4">
+                <!-- <x-jet-button class="ml-4">
                     Registrarme
-                </x-jet-button>
+                </x-jet-button> -->
+
+                <x-jet-button 
+                    style="background-color: #1D234D;"
+                    class="g-recaptcha ml-4" 
+                    data-sitekey="6LeZ4AErAAAAAOx3RC6qulKWQOKBXzhpvFNvbkeS" 
+                    data-callback='onSubmit' 
+                    data-action='submit'>Registrarme</x-jet-button>
             </div>
         </form>
     </x-jet-authentication-card>
 </x-guest-layout>
+
+<script src="https://www.google.com/recaptcha/api.js"></script>
+
+<script>
+   function onSubmit(token) {
+     document.getElementById("form-registrar").submit();
+   }
+ </script>

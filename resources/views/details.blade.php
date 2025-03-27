@@ -207,6 +207,26 @@
                                       </div>                                 
                                     </div>
                                     <div class="row">
+                                      <div class="col-6">
+                                        <label class="form-label">Telegram</label>
+                                        <input style="border-radius: 10px;" type="text" class="form-control" name="telegram" id="telegram" placeholder="Usuario">
+                                      </div>
+                                      <div class="col-6">
+                                        <label class="form-label">Teléfono</label>
+                                        <input style="border-radius: 10px;" type="number" class="form-control" name="telefono" id="telefono" placeholder="Número">
+                                      </div>
+                                    </div>
+                                    <div class="row mt-2">
+                                      <div class="col-6">
+                                        <label class="form-label">País</label>
+                                        <input style="border-radius: 10px;" type="text" class="form-control" name="pais" id="pais">
+                                      </div>
+                                      <div class="col-6">
+                                        <label class="form-label">Ciudad</label>
+                                        <input style="border-radius: 10px;" type="text" class="form-control" name="ciudad" id="ciudad">
+                                      </div>
+                                    </div>
+                                    <div class="row">
                                       <div class="mb-3 pt-2 container">
                                         <label for="exampleFormControlInput1" class="form-label">Métodos de pago</label>
                                         <div class="row">
