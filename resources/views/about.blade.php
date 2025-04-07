@@ -341,9 +341,9 @@
                             </div>
                             <div class="footer-social-icon text-center">
                                 <span>Síguenos</span>
-                                <a href="{{$datos->link_facebook}}"><i class="fab fa-facebook-f facebook-bg"></i></a>
-                                <a href="{{$datos->link_instagram}}"><i class="fab fa-instagram instagram-bg"></i></a>
-                                <a href="{{$datos->link_tiktok}}"><i style="color: black;" class="fab fa-tiktok bg-white"></i></a>
+                                <a href="{{$datos->link_facebook}}" target="_blank"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                                <a href="{{$datos->link_instagram}}" target="_blank"><i class="fab fa-instagram instagram-bg"></i></a>
+                                <a href="{{$datos->link_tiktok}}" target="_blank"><i style="color: black;" class="fab fa-tiktok bg-white"></i></a>
                             </div>
                         </div>
                     </div>
