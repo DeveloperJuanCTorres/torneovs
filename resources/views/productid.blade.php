@@ -70,7 +70,6 @@
             <div class="row">
               <div class="col-lg-12">
                 <div class="header-text">
-                  <!-- <div class="contenedor"> -->
                   <div class = "card-wrapper">
                     <div class = "card">
                         <!-- card left -->
@@ -148,8 +147,6 @@
                         </div>
                     </div>
                     </div>
-                
-                <!-- </div>                    -->
                   </div>                  
                 </div>
               </div>
