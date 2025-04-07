@@ -202,8 +202,8 @@
                             <div class="footer-social-icon text-center">
                                 <span>Síguenos</span>
                                 <a href="{{$datos->link_facebook}}"><i class="fab fa-facebook-f facebook-bg"></i></a>
-                                <a href="{{$datos->instagram}}"><i class="fab fa-twitter twitter-bg"></i></a>
-                                <a href="{{$datos->tiktok}}"><i class="fab fa-google-plus-g google-bg"></i></a>
+                                <a href="{{$datos->instagram}}"><i class="fab fa-instagram instagram-bg"></i></a>
+                                <a href="{{$datos->tiktok}}"><i style="color: black;" class="fab fa-tiktok bg-white"></i></a>
                             </div>
                         </div>
                     </div>

@@ -342,8 +342,8 @@
                             <div class="footer-social-icon text-center">
                                 <span>Síguenos</span>
                                 <a href="{{$datos->link_facebook}}"><i class="fab fa-facebook-f facebook-bg"></i></a>
-                                <a href="{{$datos->instagram}}"><i class="fab fa-twitter twitter-bg"></i></a>
-                                <a href="{{$datos->tiktok}}"><i class="fab fa-google-plus-g google-bg"></i></a>
+                                <a href="{{$datos->instagram}}"><i class="fab fa-instagram instagram-bg"></i></a>
+                                <a href="{{$datos->tiktok}}"><i style="color: black;" class="fab fa-tiktok bg-white"></i></a>
                             </div>
                         </div>
                     </div>
@@ -370,8 +370,8 @@
                             <h4 class="text-center">LIBRO DE RECLAMACIONES</h4>
                             <img class="d-block m-auto" src="assets/images/libro.png" alt="" style="width: 100px;">
                           </a>
-                          <h5 class="text-center">RUC: 20607052689</h5>
-                          <h5 class="text-center">TORNEOS VERSUS S.A.C.</h5>
+                          <h5 class="text-center">RUC: {{$datos->ruc}}</h5>
+                          <h5 class="text-center">{{$datos->razon_social}}</h5>
                         </div>
                         
                         </div>

@@ -143,8 +143,8 @@ class AdminController extends Controller
   
     public function profile(Request $request)
     {
-      
-        return view('profile');
+        $datos = Solution::all()->first();
+        return view('profile',compact('datos'));
     }
 
     public function correo(Request $request)
