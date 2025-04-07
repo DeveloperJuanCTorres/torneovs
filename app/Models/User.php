@@ -31,6 +31,7 @@ class User extends \TCG\Voyager\Models\User
         'email',
         'password',
         'avatar',
+        'phone'
     ];
 
     public function inscription()

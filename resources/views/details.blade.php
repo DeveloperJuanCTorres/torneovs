@@ -97,7 +97,7 @@
           <div class="game-details">
             <div class="row">
               <div class="col-lg-12">
-                <h2 style="font-weight: bold;">{{$evento->name}} </h2>
+                <h2 style="font-weight: bold;">{{$evento->name}}</h2>
               </div>
               <div class="col-lg-12">
                 <div class="content">
@@ -213,7 +213,8 @@
                                       </div>
                                       <div class="col-6">
                                         <label class="form-label">Teléfono</label>
-                                        <input style="border-radius: 10px;" type="number" class="form-control" name="telefono" id="telefono" placeholder="Número">
+                                        <input style="border-radius: 10px;" type="number" class="form-control" name="telefono" id="telefono" placeholder="Número" value="{{$user->phone}}">
+                                        
                                       </div>
                                     </div>
                                     <div class="row mt-2">
@@ -226,6 +227,7 @@
                                         <input style="border-radius: 10px;" type="text" class="form-control" name="ciudad" id="ciudad">
                                       </div>
                                     </div>
+                                    @if($evento->pay==0)
                                     <div class="row">
                                       <div class="mb-3 pt-2 container">
                                         <label for="exampleFormControlInput1" class="form-label">Métodos de pago</label>
@@ -238,13 +240,16 @@
                                           942093483
                                         </div>                                                               
                                       </div>
-                                    </div>
+                                    </div>                                    
                                     <div class="row">
                                       <div class="mb-3 pt-2 container">
                                         <label for="exampleFormControlInput1" class="form-label">Subir comprobante de pago</label>
-                                        <input style="border-radius: 10px;" type="file" class="form-control" id="vaucher" name="vaucher">                                                                 
+                                        <input style="border-radius: 10px;" type="file" class="form-control" id="vaucher" name="vaucher">      
+                                                                                                 
                                       </div>
                                     </div>
+                                    @endif
+                                    <input hidden style="border-radius: 10px;" type="text" class="form-control" id="gratis" name="gratis" value="{{$evento->pay}}">   
                                     <hr>
                                     <div class="row">
                                       <div class="mb-3 pt-2 container">
@@ -356,6 +361,7 @@
       var apoderado = $("#apoderado").val();
       var dni = $("#dni").val();
       var vinculo = $("#vinculo").val();
+      var gratis = $("#gratis").val();
 
       if (equipo == '') {
         Swal.fire({
@@ -382,24 +388,30 @@
           });
           return false;
       }else{
-            const MAXIMO_TAMANIO_BYTES = 2000000;
+        if (gratis==0) {
+          const MAXIMO_TAMANIO_BYTES = 2000000;
             var archivo = $('#vaucher')[0].files[0];
-            if (archivo.size > MAXIMO_TAMANIO_BYTES) {
-                Swal.fire({
-                    icon:'warning',
-                    text: 'Maximum file size is 2MB',
-                });
-                return false;
+            if (archivo.size > MAXIMO_TAMANIO_BYTES) {              
+              Swal.fire({
+                  icon:'warning',
+                  text: 'Maximum file size is 2MB',
+              });
+              return false;              
             }
+        }            
         }
-
-    
-        formData.append('file',$('#vaucher')[0].files[0]);
+        console.log(gratis);
+        
+        if (gratis==0) {
+          formData.append('file',$('#vaucher')[0].files[0]);
+        }
+        
         formData.append('evento',evento);
         formData.append('apoderado',apoderado);
         formData.append('vinculo',vinculo); 
         formData.append('equipo',equipo); 
         formData.append('id',id);
+        formData.append('gratis',gratis);
         console.log(formData);
       $.ajax({
           url: "/enviar",

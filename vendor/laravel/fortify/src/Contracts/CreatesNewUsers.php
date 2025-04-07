@@ -2,6 +2,9 @@
 
 namespace Laravel\Fortify\Contracts;
 
+// use GuzzleHttp\Psr7\Request;
+use Illuminate\Http\Request;
+
 interface CreatesNewUsers
 {
     /**
@@ -10,5 +13,5 @@ interface CreatesNewUsers
      * @param  array  $input
      * @return \Illuminate\Foundation\Auth\User
      */
-    public function create(array $input);
+     public function create(array $input);
 }

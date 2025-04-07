@@ -297,16 +297,99 @@
     </div>
   </div>
   
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <p>Copyright © 2023 <a href="#">Torneo VS</a> Todos los derechos reservados. 
-          
-          <br> Distribuido por <a href="#">Torneo Versus</a></p>
+  <footer class="footer-section">
+        <div class="container">
+            <div class="footer-cta pt-5 pb-5">
+                <div class="row text-center">
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="cta-text">
+                                <h4>Encuéntranos</h4>
+                                <span>{{$datos->address}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fas fa-phone"></i>
+                            <div class="cta-text">
+                                <h4>Llámanos</h4>
+                                <span>{{$datos->phone}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="far fa-envelope-open"></i>
+                            <div class="cta-text">
+                                <h4>Correo electrónico</h4>
+                                <span>{{$datos->email}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-content pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-logo">
+                              <a href="/" class="logo">
+                                <img class="img-fluid d-block m-auto" style="width: 100px !important;" src="assets/images/logo.png" alt="">
+                              </a>
+                            </div>
+                            <div class="footer-social-icon text-center">
+                                <span>Síguenos</span>
+                                <a href="{{$datos->link_facebook}}"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                                <a href="{{$datos->instagram}}"><i class="fab fa-twitter twitter-bg"></i></a>
+                                <a href="{{$datos->tiktok}}"><i class="fab fa-google-plus-g google-bg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Enlaces Útiles</h3>
+                            </div>
+                            <ul>
+                                <li><a href="#">Inicio</a></li>
+                                <li><a href="#">Nosotros</a></li>
+                                <li><a href="#">Contáctanos</a></li>
+                                <li><a href="#">Perfil</a></li>
+                                <li><a style="color: white;" href="#">Términos y condiciones</a></li>
+                                <li><a style="color: white;" href="#">Políticas de privacidad</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                        <div class="footer-widget">
+                                
+                        <div class="row">
+                          <a href="/libro-reclamaciones">
+                            <h4 class="text-center">LIBRO DE RECLAMACIONES</h4>
+                            <img class="d-block m-auto" src="assets/images/libro.png" alt="" style="width: 100px;">
+                          </a>
+                          <h5 class="text-center">RUC: 20607052689</h5>
+                          <h5 class="text-center">TORNEOS VERSUS S.A.C.</h5>
+                        </div>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </footer>
+        <div class="copyright-area">
+            <div class="container">
+                <div class="row">
+                    <div class="text-center">
+                        <div class="copyright-text">
+                            <p>Copyright &copy; 2025, Todos los derechos reservados <a href="/">Torneos Versus</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 </x-app-layout>

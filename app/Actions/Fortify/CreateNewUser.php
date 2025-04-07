@@ -4,6 +4,7 @@ namespace App\Actions\Fortify;
 
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Validator;
 use Laravel\Fortify\Contracts\CreatesNewUsers;
 use Laravel\Jetstream\Jetstream;
@@ -37,6 +38,21 @@ class CreateNewUser implements CreatesNewUsers
             $tipo_doc = "PASAPORTE";
         }
 
+        $ruta = "https://mensajex.com/api/ChatBot/apisend";
+        $body = array(
+            "numero_celular" => $input['phone'],
+            "mensaje" => "tu codigo es de prueba",
+            "ruta_imagen" => ""
+        );
+
+        // Http::withBody()->post($ruta, $body);
+
+        Http::post($ruta, [
+            "numero_celular" => $input['phone'],
+            "mensaje" => "tu codigo es de prueba",
+            "ruta_imagen" => "",
+        ]);
+
         return User::create([
             'name' => $input['name'],
             'nick_name' => $input['nick_name'],
@@ -44,6 +60,8 @@ class CreateNewUser implements CreatesNewUsers
             'numero_doc' => $input['numero_doc'],
             'email' => $input['email'],
             'password' => Hash::make($input['password']),
+            'phone' => $input['phone'],
+            
         ]);
     }
 }

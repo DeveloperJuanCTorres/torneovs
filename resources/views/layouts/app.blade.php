@@ -49,19 +49,23 @@
         <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
 
         <!-- Bootstrap core CSS -->
-        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
 
         <?php $version='1993.1.55';?>
         <!-- Additional CSS Files -->
-        <link rel="stylesheet" href="assets/css/mystyles.css?v=<?php echo $version;?>">
-        <link rel="stylesheet" href="assets/css/fontawesome.css?v=<?php echo $version;?>">
-        <link rel="stylesheet" href="assets/css/templatemo-cyborg-gaming.css?v=<?php echo $version;?>">
-        <link rel="stylesheet" href="assets/css/owl.css?v=<?php echo $version;?>">
-        <link rel="stylesheet" href="assets/css/animate.css?v=<?php echo $version;?>">
+
+        <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/footer.css')}}?v=<?php echo $version;?>">
+        <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/mystyles.css')}}?v=<?php echo $version;?>">
+        <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/fontawesome.css')}}?v=<?php echo $version;?>">
+        <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/templatemo-cyborg-gaming.css')}}?v=<?php echo $version;?>">
+        <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/owl.css')}}?v=<?php echo $version;?>">
+        <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/animate.css')}}?v=<?php echo $version;?>">
         <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
 
+        
+
         <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+        <!-- vite(['resources/css/app.css', 'resources/js/app.js']) -->
 
         <!-- Styles -->
         @livewireStyles
@@ -123,15 +127,16 @@
         
         <!-- Scripts -->
         <!-- Bootstrap core JavaScript -->
-        <script src="vendor/jquery/jquery.min.js"></script>
-        <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+        <script src="{{ asset('vendor/jquery/jquery.min.js')}}"></script>
+        <script src="{{ asset('vendor/bootstrap/js/bootstrap.min.js')}}"></script>
 
-        <script src="assets/js/mystyles.js"></script>
-        <script src="assets/js/isotope.min.js"></script>
-        <script src="assets/js/owl-carousel.js"></script>
-        <script src="assets/js/tabs.js"></script>
-        <script src="assets/js/popup.js"></script>
-        <script src="assets/js/custom.js"></script>
+        <script src="{{ asset('assets/js/mystyles.js')}}"></script>
+        <script src="{{ asset('assets/js/isotope.min.js')}}"></script>
+        <script src="{{ asset('assets/js/owl-carousel.js')}}"></script>
+        <script src="{{ asset('assets/js/tabs.js')}}"></script>
+        <script src="{{ asset('assets/js/popup.js')}}"></script>
+        <script src="{{ asset('assets/js/custom.js')}}"></script>
+        <script src="{{ asset('assets/js/ubigeo.js')}}"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
