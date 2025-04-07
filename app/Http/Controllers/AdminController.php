@@ -120,12 +120,13 @@ class AdminController extends Controller
 
     public function details(Request $request)
     {    
-      $user = auth()->user();    
-      $evento = Event::find($request->id);
-      $archivo = json_decode($evento->bases);
-      $detalle = Detail::where('event_id', $request->id)->first();
-      $participantes = Inscription::where('event_id',$request->id)->where('status',1)->get();
-        return view('details',compact('evento','participantes','detalle','archivo','user'));
+        $datos = Solution::all()->first();
+        $user = auth()->user();    
+        $evento = Event::find($request->id);
+        $archivo = json_decode($evento->bases);
+        $detalle = Detail::where('event_id', $request->id)->first();
+        $participantes = Inscription::where('event_id',$request->id)->where('status',1)->get();
+        return view('details',compact('evento','participantes','detalle','archivo','user','datos'));
     }
 
     public function productoid(Product $product)
@@ -136,7 +137,8 @@ class AdminController extends Controller
 
     public function reclamaciones()
     {
-        return view('libro-reclamaciones');
+        $datos = Solution::all()->first();
+        return view('libro-reclamaciones', compact('datos'));
     }
   
     public function profile(Request $request)
@@ -213,7 +215,8 @@ class AdminController extends Controller
 
     public function contact()
     {
+        $datos = Solution::all()->first();
         $contacto = Contact::all()->first();
-        return view('contact',compact('contacto'));
+        return view('contact',compact('contacto','datos'));
     }  
 }

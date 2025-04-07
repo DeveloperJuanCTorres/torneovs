@@ -230,8 +230,8 @@
                             <h6 class="text-center">LIBRO DE RECLAMACIONES</h6>
                             <img class="d-block m-auto" src="{{ asset('assets/images/libro.png')}}" alt="" style="width: 100px;">
                           </a>
-                          <h6 class="text-center">RUC: 20607052689</h6>
-                          <h6 class="text-center">TORNEOS VERSUS S.A.C.</h6>
+                          <h6 class="text-center">RUC: {{$datos->ruc}}</h6>
+                          <h6 class="text-center">{{$datos->razon_social}}</h6>
                         </div>
                         
                         </div>

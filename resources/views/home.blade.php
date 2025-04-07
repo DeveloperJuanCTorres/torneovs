@@ -210,105 +210,7 @@
                       </div>
                     </div>
                   </div>
-                  @endforeach
-                  <!-- <div class="col-lg-3 col-sm-6">
-                    <div class="item">
-                      <div class="thumb">
-                        <img src="assets/images/clip-02.jpg" alt="" style="border-radius: 23px;">
-                      </div>
-                      <div class="down-content">
-                        <h4>Nombre del producto</h4>
-                        <span style="font-size: 18px;"><i class="fa-solid fa-money-bill-wave" style="color: white;"></i>  S/. 20</span>
-                        <div class="row p-2 d-block">
-                          <input class="btn btn-primary" value="Comprar">
-                        </div>                                              
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-3 col-sm-6">
-                    <div class="item">
-                      <div class="thumb">
-                        <img src="assets/images/clip-03.jpg" alt="" style="border-radius: 23px;">
-                      </div>
-                      <div class="down-content">
-                        <h4>Nombre del producto</h4>
-                        <span style="font-size: 18px;"><i class="fa-solid fa-money-bill-wave" style="color: white;"></i>  S/. 20</span>
-                        <div class="row p-2 d-block">
-                          <input class="btn btn-primary" value="Comprar">
-                        </div>                                              
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-3 col-sm-6">
-                    <div class="item">
-                      <div class="thumb">
-                        <img src="assets/images/clip-04.jpg" alt="" style="border-radius: 23px;">
-                      </div>
-                      <div class="down-content">
-                        <h4>Nombre del producto</h4>
-                        <span style="font-size: 18px;"><i class="fa-solid fa-money-bill-wave" style="color: white;"></i>  S/. 20</span>
-                        <div class="row p-2 d-block">
-                          <input class="btn btn-primary" value="Comprar">
-                        </div>                                              
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-3 col-sm-6">
-                    <div class="item">
-                      <div class="thumb">
-                        <img src="assets/images/clip-01.jpg" alt="" style="border-radius: 23px;">
-                      </div>
-                      <div class="down-content">
-                        <h4>Nombre del producto</h4>
-                        <span style="font-size: 18px;"><i class="fa-solid fa-money-bill-wave" style="color: white;"></i>  S/. 20</span>
-                        <div class="row p-2 d-block">
-                          <input class="btn btn-primary" value="Comprar">
-                        </div>                                              
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-3 col-sm-6">
-                    <div class="item">
-                      <div class="thumb">
-                        <img src="assets/images/clip-02.jpg" alt="" style="border-radius: 23px;">
-                      </div>
-                      <div class="down-content">
-                        <h4>Nombre del producto</h4>
-                        <span style="font-size: 18px;"><i class="fa-solid fa-money-bill-wave" style="color: white;"></i>  S/. 20</span>
-                        <div class="row p-2 d-block">
-                          <input class="btn btn-primary" value="Comprar">
-                        </div>                                              
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-3 col-sm-6">
-                    <div class="item">
-                      <div class="thumb">
-                        <img src="assets/images/clip-03.jpg" alt="" style="border-radius: 23px;">
-                      </div>
-                      <div class="down-content">
-                        <h4>Nombre del producto</h4>
-                        <span style="font-size: 18px;"><i class="fa-solid fa-money-bill-wave" style="color: white;"></i>  S/. 20</span>
-                        <div class="row p-2 d-block">
-                          <input class="btn btn-primary" value="Comprar">
-                        </div>                                              
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-3 col-sm-6">
-                    <div class="item">
-                      <div class="thumb">
-                        <img src="assets/images/clip-04.jpg" alt="" style="border-radius: 23px;">
-                      </div>
-                      <div class="down-content">
-                        <h4>Nombre del producto</h4>
-                        <span style="font-size: 18px;"><i class="fa-solid fa-money-bill-wave" style="color: white;"></i>  S/. 20</span>
-                        <div class="row p-2 d-block">
-                          <input class="btn btn-primary" value="Comprar">
-                        </div>                                              
-                      </div>
-                    </div>
-                  </div> -->
+                  @endforeach                  
                   <div class="col-lg-12">
                     <div class="main-button">
                       <a href="#">Ver más</a>
@@ -397,8 +299,8 @@
                             <h4 class="text-center">LIBRO DE RECLAMACIONES</h4>
                             <img class="d-block m-auto" src="assets/images/libro.png" alt="" style="width: 100px;">
                           </a>
-                          <h5 class="text-center">RUC: 20607052689</h5>
-                          <h5 class="text-center">TORNEOS VERSUS S.A.C.</h5>
+                          <h5 class="text-center">RUC: {{$datos->ruc}}</h5>
+                          <h5 class="text-center">{{$datos->razon_social}}</h5>
                         </div>
                         
                         </div>
