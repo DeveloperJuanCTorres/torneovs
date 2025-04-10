@@ -119,7 +119,7 @@
                         <ul>
                           <li>
                             <div style="display: flex;justify-content: center;">
-                              @if($detalle->link_facebook == null)
+                              @if($detalle->link_facebook == '')
                               <a href="#">
                                 <img style="width: 30px;border-radius: 10px" src="assets/images/icons/facebook.png" alt="">
                               </a>
@@ -133,7 +133,7 @@
                           </li>
                           <li>
                             <div style="display: flex;justify-content: center;">
-                              @if($detalle->link_instagran == null)
+                              @if($detalle->link_instagran == '')
                               <a href="#">
                                 <img style="width: 30px;border-radius: 10px;" src="assets/images/icons/instagran.png" alt="">
                               </a>
@@ -147,7 +147,7 @@
                           </li>
                           <li>
                             <div style="display: flex;justify-content: center;">
-                              @if($detalle->link_tiktok == null)
+                              @if($detalle->link_tiktok == '')
                               <a href="#">
                                 <img style="width: 30px;border-radius: 10px;" src="assets/images/icons/tiktok.jpg" alt="">
                               </a>
@@ -161,7 +161,7 @@
                           </li>
                           <li>
                             <div style="display: flex;justify-content: center;">
-                              @if($detalle->link_youtube == null)
+                              @if($detalle->link_youtube == '')
                               <a href="#">
                                 <img style="width: 30px;border-radius: 10px;" src="assets/images/icons/youtube.png" alt="">
                               </a>
