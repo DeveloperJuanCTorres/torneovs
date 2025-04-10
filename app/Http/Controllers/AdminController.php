@@ -126,6 +126,7 @@ class AdminController extends Controller
         $archivo = json_decode($evento->bases);
         $detalle = Detail::where('event_id', $request->id)->first();
         $participantes = Inscription::where('event_id',$request->id)->where('status',1)->get();
+
         return view('details',compact('evento','participantes','detalle','archivo','user','datos'));
     }
 
