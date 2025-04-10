@@ -119,33 +119,57 @@
                         <ul>
                           <li>
                             <div style="display: flex;justify-content: center;">
+                              @if($detalle->link_facebook == null)
+                              <a href="#">
+                                <img style="width: 30px;border-radius: 10px" src="assets/images/icons/facebook.png" alt="">
+                              </a>
+                              @else
                               <a href="{{$detalle->link_facebook}}" target="_blank">
                                 <img style="width: 30px;border-radius: 10px" src="assets/images/icons/facebook.png" alt="">
                               </a>
+                              @endif
                             </div> 
                             Facebook
                           </li>
                           <li>
                             <div style="display: flex;justify-content: center;">
+                              @if($detalle->link_instagran == null)
+                              <a href="#">
+                                <img style="width: 30px;border-radius: 10px;" src="assets/images/icons/instagran.png" alt="">
+                              </a>
+                              @else
                               <a href="{{$detalle->link_instagran}}" target="_blank">
                                 <img style="width: 30px;border-radius: 10px;" src="assets/images/icons/instagran.png" alt="">
                               </a>
+                              @endif
                             </div> 
                              Instagran
                           </li>
                           <li>
                             <div style="display: flex;justify-content: center;">
+                              @if($detalle->link_tiktok == null)
+                              <a href="#">
+                                <img style="width: 30px;border-radius: 10px;" src="assets/images/icons/tiktok.jpg" alt="">
+                              </a>
+                              @else
                               <a href="{{$detalle->link_tiktok}}" target="_blank">
                                 <img style="width: 30px;border-radius: 10px;" src="assets/images/icons/tiktok.jpg" alt="">
                               </a>
+                              @endif
                             </div> 
                             TikTok
                           </li>
                           <li>
                             <div style="display: flex;justify-content: center;">
+                              @if($detalle->link_youtube == null)
+                              <a href="#">
+                                <img style="width: 30px;border-radius: 10px;" src="assets/images/icons/youtube.png" alt="">
+                              </a>
+                              @else
                               <a href="{{$detalle->link_youtube}}" target="_blank">
                                 <img style="width: 30px;border-radius: 10px;" src="assets/images/icons/youtube.png" alt="">
                               </a>
+                              @endif
                             </div> 
                              Youtube
                           </li>
