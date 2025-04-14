@@ -76,13 +76,13 @@
                     <div class="imagen actual">
                       <img class="pc" style="border-radius: 20px;" src="/storage/{{$item->banner_url}}" />
                       <img class="mobil" style="border-radius: 20px;display: none;" src="/storage/{{$item->banner_mobil_url}}" />
-                      <div class="texto">{{$item->name}} </div>
+                      <!-- <div class="texto">{{$item->name}} </div> -->
                     </div>
                     @else
                     <div class="imagen">
                       <img class="pc" style="border-radius: 20px;" src="/storage/{{$item->banner_url}}" />
                       <img class="mobil" style="border-radius: 20px;display: none;" src="/storage/{{$item->mobil_url}}" />
-                      <div class="texto">{{$item->name}}</div>
+                      <!-- <div class="texto">{{$item->name}}</div> -->
                     </div>
                     @endif
 
