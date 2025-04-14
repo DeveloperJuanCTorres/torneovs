@@ -51,7 +51,7 @@
         <!-- Bootstrap core CSS -->
         <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
 
-        <?php $version='1993.1.56';?>
+        <?php $version='1993.1.57';?>
         <!-- Additional CSS Files -->
 
         <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/footer.css')}}?v=<?php echo $version;?>">
