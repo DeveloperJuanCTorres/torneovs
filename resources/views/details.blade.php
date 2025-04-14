@@ -102,9 +102,25 @@
               <div class="col-lg-12">
                 <div class="content">
                   <div class="row">
+                    @if($evento->count == 0)
                     <div class="col-lg-6">
                       <div class="left-info">
-                        <div class="left">
+                        <h5 class="text-center"><em>Campeonato:</em></h5>
+                        <div class="left pt-2">
+                          <h4>Fecha de inicio</h4>
+                          <span>{{$evento->date_event_start}}</span>
+                        </div>
+                        <ul>
+                          <li>Fecha fin</li>
+                          <li>{{$evento->date_event_end}}</li>
+                        </ul>
+                      </div>
+                    </div>
+                    @else
+                    <div class="col-lg-6">
+                      <div class="left-info">
+                        <h5 class="text-center"><em>Inscripción:</em></h5>
+                        <div class="left pt-2">
                           <h4>Fecha de inicio</h4>
                           <span>{{$evento->date_start}}</span>
                         </div>
@@ -114,6 +130,7 @@
                         </ul>
                       </div>
                     </div>
+                    @endif
                     <div class="col-lg-6">
                       <div class="right-info">
                         <ul>

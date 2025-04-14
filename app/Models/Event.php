@@ -20,6 +20,11 @@ class Event extends Model
         'status',
         'price',
         'link_youtube',
-        'bases'
+        'bases',
+        'pay',
+        'banner_mobil_url',
+        'count',
+        'date_event_start',
+        'date_event_end'
     ];
 }

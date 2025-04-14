@@ -147,10 +147,32 @@
                           {{$item->description}}
                         </h4>
                       </div>
+                      @if($item->count == 0)
                       <div class="row pt-2">
-                        <h4 style="text-align: center;">Fecha: {{$item->date_start}}</h4>
+                        <h4><em>Campeonato:</em></h4>
+                        <div class="row text-center">
+                          <div class="col-6">
+                            <h4 style="text-align: center;">Inicio: {{$item->date_event_start}}</h4>
+                          </div>
+                          <div class="col-6">
+                            <h4 style="text-align: center;">Fin: {{$item->date_event_start}}</h4>
+                          </div>
+                        </div>                        
                       </div>
-                      <h4>Inscripción<br><span>S/ {{$item->price}}</span></h4>  
+                      @else
+                      <div class="row pt-2">
+                        <h4><em>Inscripción:</em></h4>
+                        <div class="row text-center">
+                          <div class="col-6">
+                            <h4 style="text-align: center;">Inicio: {{$item->date_start}}</h4>
+                          </div>
+                          <div class="col-6">
+                            <h4 style="text-align: center;">Fin: {{$item->date_start}}</h4>
+                          </div>
+                        </div>                        
+                      </div>
+                      @endif
+                      <h4>Precio<br><span>S/ {{$item->price}}</span></h4>  
                       <ul>
                         <li><i class="fa fa-star"></i> 4.8</li>
                         <li>
